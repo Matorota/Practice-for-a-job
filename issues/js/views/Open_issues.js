@@ -12,9 +12,6 @@ export default class extends AbstractView {
             <p>
                 These are your open issues
             </p>
-            <p>
-                <a href="/Done_Issues" data-link>View done issues</a>.
-            </p>
         `;
     }
 }

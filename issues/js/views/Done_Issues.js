@@ -10,7 +10,7 @@ export default class extends AbstractView {
         return `
             <h1>Done Issues</h1>
             <p>You are viewing Done Issues!</p>
-            <a href="/Trashed_Issues" data-link>View Trashed Issues</a>.
+       
 
         `;
     }

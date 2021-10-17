@@ -10,7 +10,7 @@ export default class extends AbstractView {
     async getHtml() {
         return `
             <h1>Done Issues</h1>
-            <p>You are view Done_Issues #${this.Done_IssuesId}.</p>
+            <p>#${this.Done_IssuesId}.</p>
         `;
     }
 }
