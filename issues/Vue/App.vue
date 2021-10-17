@@ -1,35 +1,62 @@
- <script>
-        new Vue({
-            el: '#to_do',
 
-            data: {
-                isEditing: false,
-                todo: '',
-                todos: [],
-                selectedTodo: null
-            },
+ <!-- I AM LOST in Vue looks easy but i always get errors -->
 
-            methods: {
-                storeTodo() {
-                    this.todos.push(this.todo)
-                    this.todo = ''
-                },
+ 
+<!--  <template>
+  <h1>Vue 3 Todo App</h1>
+  <form @submit.prevent="addNewTodo">
+    <label>New Todo</label>
+    <input v-model="newTodo" name="newTodo">
+    <button>Add New Todo</button>
+  </form>
+  <button @click="removeAllTodos">Remove All</button>
+  <button @click="markAllDone">Mark All Done</button>
 
-                removeTodo(index) {
-                    this.todos.splice(index, 1)
-                },
+  <ul>
+    <li v-for="(todo, index) in todos" :key="todo.id" class="todo">
+      <h3 :class="{ done: todo.done }" @click="toggleDone(todo)">{{todo.content}}</h3>
+      <button @click="removeTodo(index)">Remove Todo</button>
+    </li>
+  </ul>
 
-                updateTodo() {
-                    this.todos.splice(this.selectedIndex, 1, this.todo)
-                    this.todo = ''
-                    this.isEditing = false
-                },
 
-                editTodo(index, todo) {
-                    this.isEditing = true
-                    this.todo = todo
-                    this.selectedIndex = index
-                }
-            }
-        })
-    </script>
+</template>
+
+<script>
+import { ref } from 'vue';
+export default {
+  setup() {
+    const newTodo = ref('');
+    const todos = ref([]);
+    function addNewTodo() {
+      todos.value.push({
+        id: Date.now(),
+        done: false,
+        content: newTodo.value,
+      });
+      newTodo.value = '';
+    }
+    function toggleDone(todo) {
+      todo.done = !todo.done;
+    }
+    function removeTodo(index) {
+      todos.value.splice(index, 1);
+    }
+    function markAllDone() {
+      todos.value.forEach((todo) => todo.done = true);
+    }
+    function removeAllTodos() {
+      todos.value = [];
+    }
+    return {
+      todos,
+      newTodo,
+      addNewTodo,
+      toggleDone,
+      removeTodo,
+      markAllDone,
+      removeAllTodos,
+    };
+  }
+}
+</script> -->

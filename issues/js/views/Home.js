@@ -10,6 +10,8 @@ export default class extends AbstractView {
         return `
             <h1>YOUR OWN TO DO LIST!!!</h1>
             <p>MANAGE YOUR TIME MORE EFFICIENTLY.</p>
+            <a href="/Open_issues" data-link>View Open issues</a>.
+
         `;
     }
 }
